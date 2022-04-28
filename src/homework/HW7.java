@@ -184,32 +184,19 @@ public class HW7 {
         int count = 0;
         for (int i = 0; i < 11; i++) {
             if (i % 2 == 0) {
-                count = count + 1;
+                count++;
             }
         }
         int[] massive = new int[count];
-        int number = 0;
-        for (int j = 0; j < massive.length; j++) {
-            if (number >= 0 && number < 11 && number % 2 == 0) {
-                massive[j] = number;
-                number += 2;
-
+        count = 0;
+//
+        for(int j = 0; j < 11; j++){
+            if(j % 2 == 0){
+                massive[count] = j;
+                count++;
             }
         }
-        System.out.println(Arrays.toString(massive));
 
-        //вариант B
-        int countLength = 0;
-        for (int i = 0; i < 11; i += 2) {
-            i = countLength;
-            countLength++;
-        }
-        int[] massivTask18 = new int[countLength];
-        int num = 0;
-        for (int j = 0; j < massivTask18.length; j += 2) {
-            massivTask18[j] = num;
-            num += 2;
-        }
         System.out.println(Arrays.toString(massive));
 
         task(); //18
@@ -233,6 +220,14 @@ public class HW7 {
                 }
             }
         }
+
+        task();//20 Создать массив из 10 случайных положительных целых чисел
+        int[] arrRandom = new int[10];
+        for (int i = 0; i < arrRandom.length; i++ ){
+            arrRandom[i] = ((int) (Math.random() * 10));
+                System.out.print(arrRandom[i] + " ");
+            }
+
 
     }
 }
