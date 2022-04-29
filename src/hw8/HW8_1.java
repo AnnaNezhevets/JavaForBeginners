@@ -2,7 +2,7 @@ package hw8;
 
 public class HW8_1 {
 
-     //Task1
+    //Task1
 
     //Task2
 
@@ -17,7 +17,7 @@ public class HW8_1 {
 
     //Task6 Создать объекты типа Integer, Double, String и присвоить им любые значения.
 
-    public static void printLine(){
+    public static void printLine() {
         System.out.println("________________________________________________________");
     }
 
@@ -58,6 +58,73 @@ public class HW8_1 {
 
     //Task10 Написать метод, который принимает на вход массив целых чисел, и возвращает массив тех же чисел,
     // умноженных на 2.5
+    public static double[] arrayMulty(int[] arr) {
+        double[] arr1 = new double[arr.length];
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = arr[i] * 2.5;
+        }
+
+        return arr1;
+    }
+
+    //Task11 Написать метод, который принимает на вход массив целых положительных чисел,  и возвращает количество
+    // четных чисел в этом массиве
+
+    public static int returnDigitalWithEven(int[] arr) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    //Task12 Написать метод, который принимает на вход массив целых положительных чисел, и возвращает массив нечетных
+    // чисел
+    public static int[] returnArrayOddDigital(int[] arr) {
+        int j = 0;
+        int countlengthOdd = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                countlengthOdd++;
+            }
+        }
+        int[] arr1 = new int[countlengthOdd];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr.length != 0 && arr[i] >= 0) {
+                if (arr[i] % 2 != 0) {
+                    arr1[j] = arr[i];
+                    j++;
+                }
+            } else {
+                System.out.println("Error");
+            }
+        }
+        return arr1;
+    }
+
+    //Task13 Написать метод, который принимает на вход массив целых чисел, и возвращает массив значений
+    // true или false, если числа больше 10
+
+    public static boolean[] returnTrueOrFalse(int [] array){
+        boolean[] arrBoolean = new boolean[array.length];
+        for (int i= 0; i < array.length; i++) {
+            if (array[i] < 10) {
+                arrBoolean[i] = true;
+            } else {
+                arrBoolean[i] = false;
+                i++;
+            }
+        }
+
+        return arrBoolean;
+    }
+
+
+
+
 
 
 
