@@ -53,4 +53,14 @@ public class Utils {
         System.out.println(b);
     }
 
+    public static int[] checkZero(int [] arr){
+        if (arr.length == 0){
+            return new int[]{};
+        } else {
+            return arr;
+        }
+    }
+
+
+
 }

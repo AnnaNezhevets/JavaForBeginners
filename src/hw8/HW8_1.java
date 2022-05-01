@@ -1,5 +1,7 @@
 package hw8;
 
+import static homework.Utils.*;
+
 public class HW8_1 {
 
     //Task1
@@ -108,9 +110,9 @@ public class HW8_1 {
     //Task13 Написать метод, который принимает на вход массив целых чисел, и возвращает массив значений
     // true или false, если числа больше 10
 
-    public static boolean[] returnTrueOrFalse(int [] array){
+    public static boolean[] returnTrueOrFalse(int[] array) {
         boolean[] arrBoolean = new boolean[array.length];
-        for (int i= 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] < 10) {
                 arrBoolean[i] = true;
             } else {
@@ -122,13 +124,44 @@ public class HW8_1 {
         return arrBoolean;
     }
 
+    //Task14 Написать метод, который принимает на вход массив слов, и возвращает строку, состоящую из этих слов
+    public static String returnPhraseString(String[] array) {
+        String text = "";
+        for (int i = 0; i < array.length; i++) {
+            text += array[i];
+
+        }
+        return text;
+    }
+
+    //Task15 Написать метод, который принимает массив целых чисел и считает сумму чисел во второй
+    // половине массива
 
 
+    public static int countSumSecondHalf(int[] arr) {
+        checkZero(arr);
+        int sum = 0;
+        for (int i = arr.length / 2; i < arr.length; i++) {
+            sum += arr[i];
+        }
 
+        return sum;
+    }
+    //Task16 Написать метод, который принимает на вход целое положительные число, в пределах от 1 до 10 исключительно,
+    // и возвращает таблицу умножения на это число в виде массива
+    //Например, метод(2) -> {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
 
+    public static int[] returnArrMult(int i_16) {
+        int[] arr = new int[11];
+        int mult = 0;
+        for (int i = 0; i < arr.length; i++) {
+           mult = i * i_16;
+           arr[i] = mult;
 
+        }
 
-
+        return arr;
+    }
 
 
 }
