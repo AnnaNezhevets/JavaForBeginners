@@ -22,7 +22,6 @@ public class MethMyforStudy {
     number++;
     }
 
-
     public static void main(String[] args) {
 
         System.out.println("\t\t\t\t" + "\uD83C\uDF4F "  + "Яблоки " + "\uD83C\uDF4E" + "\t\t\t");
@@ -329,6 +328,8 @@ public class MethMyforStudy {
                 "No more bottles of beer on the wall, no more bottles of beer.\n" +
                 "Go to the store and buy some more, 99 bottles of beer on the wall."
         );
+
+
 
     }
 }

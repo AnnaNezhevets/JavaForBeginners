@@ -6,6 +6,17 @@ import static homework.MethMyforStudy.*;
 import static homework.HW5.*;
 
 public class HW7 {
+    public static String getEvenAlgorithm(long l) {
+        if (l % 2 != 0) {
+
+            return "Odd";
+        } else if (l % 2 == 0) {
+
+            return "Even";
+        }
+
+        return "Undefined";
+    }
 
     //18 Написать метод, который принимает на вход массив int, и возвращает среднее значение.
     // Проверить работу метода тестом, если параметр - массив catsAges
@@ -225,9 +236,11 @@ public class HW7 {
         int[] arrRandom = new int[10];
         for (int i = 0; i < arrRandom.length; i++ ){
             arrRandom[i] = ((int) (Math.random() * 10));
-                System.out.print(arrRandom[i] + " ");
+                System.out.print(arrRandom[i] + " " + "\n");
             }
 
+        long l = Long.MAX_VALUE + 1;
+        System.out.println(getEvenAlgorithm(l));
 
     }
 }
