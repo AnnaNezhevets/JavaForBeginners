@@ -96,7 +96,7 @@ public class HW10 {
 
             for (int i = 0; i < str.length(); i++) {
                 if (str.charAt(i) == 'a') {
-                   count++;
+                    count++;
                 }
             }
         }
@@ -104,9 +104,9 @@ public class HW10 {
     }
 
     //Task 6
-//Напишите метод, который принимает на вход текст и проверяет, содержится ли в тексте хотя бы одно слово Java.
-    public static boolean isThereJava(String str) {
 
+    //Напишите метод, который принимает на вход текст и проверяет, содержится ли в тексте хотя бы одно слово Java.
+    public static boolean isThereJava(String str) {
         if (str != null && str.length() != 0) {
             str.contains("Java");
         }
@@ -114,6 +114,68 @@ public class HW10 {
         return str.contains("Java");
     }
 
+    //Task 7 Напишите метод, который принимает на вход строку, и добавляет Кавычки в начале строки,
+    // точку и кавычки в конце строки с помощью метода concat()
+    public static String addInvertedCommas(String str) {
+        if (str != null && str.length() != 0) {
+            String str1 = "“";
+            String str2 = ".”";
+            str = str.trim().concat(str2);
+            str = str1.concat(str);
+
+            return str;
+        }
+
+        return "";
+    }
+
+    //Task 8 Напишите метод, который принимает на вход название города и исправляет написание
+    public static String replaceNameCity(String city) {
+        if (city != null && city.length() != 0) {
+            city = city.substring(0).toLowerCase(Locale.ROOT);
+            city = city.substring(0, 1).toUpperCase(Locale.ROOT) + city.substring(1);
+
+            return city;
+        }
+
+        return "";
+    }
+
+    //Task 9 Напишите метод, который принимает на вход строку, и возвращает все, что находится между первой и последней
+    // буквой-параметром
+    public static String returnLettersBetweenStartAndEnd(String str) {
+
+        if (str != null && str.length() != 0) {
+            if (str.contains("b")) {
+                str = str.substring(str.indexOf('b'), str.lastIndexOf('b') + 1);
+            } else if (str.contains("p")) {
+                str = str.substring(str.indexOf('p'), str.lastIndexOf('p') + 1);
+            }
+
+            return str;
+        }
+
+        return "";
+    }
+
+    //Task 10 Напишите метод, который принимает на вход слово, и возвращает true, если слово начинается и
+    // заканчивается на одинаковую букву, и false иначе
+
+    public static boolean returnTrueOrFalse(String str) {
+        //boolean answer = true;
+        str = str.toLowerCase(Locale.ROOT);
+        if (str != null && str.length() != 0) {
+            if ((str.substring(0, 1).equals(str.substring(str.length() - 1)))) {
+
+                return true;
+            } else {
+
+                return false;
+            }
+        }
+
+        return false;
+    }
 
     public static void main(String[] args) {
 
@@ -121,44 +183,74 @@ public class HW10 {
 
         //String str1 = "  Написать метод, который принимает на вход строку   ";
         //String str1 = "Написать метод, который принимает на вход строку";
+        Utils.task(1);
         String str1 = "";
         System.out.println(methodForStringEmptyOrFull(str1));
 
+        Utils.task(2);
         String str2 = "panda   ";
         System.out.println(removeAlla(str2));
 
+        Utils.task(3);
         //String str3 = "   3 5 0 4 2 0 9 7 0 6 0 4 0       0 0 0 ";
         String str3 = " 0000000111";
         System.out.println(removeAllZeros(str3));
 
+        Utils.task(4);
         //String str4 = "    QA   4  Everyone   ";
         String str4 = "p a     n d a   ";
         System.out.println(removeAllSpaces(str4));
 
+        Utils.task(5);
         String str5 = "Abracadabra";
         //String str5 = "Homenum Revelio";
-                System.out.println(howLettersA(str5));
+        System.out.println(howLettersA(str5));
 
-//        //String str6 = "As of March 2022, Java 18 is the latest version, while Java 17, 11 and 8 are the current " +
-//                "long-term support (LTS) versions. Oracle released the last zero-cost public update for the legacy " +
-//                "version Java 8 LTS in January 2019 for commercial use, although it will otherwise still support " +
-//                "Java 8 with public updates for personal use indefinitely. Other vendors have begun to offer " +
-//                "zero-cost builds of OpenJDK 8 and 11 that are still receiving security and other upgrades";
-        String str6 = "As a decrepit father takes delight " +
-                "To see his active child do deeds of youth, " +
-                "So I, made lame by fortune’s dearest spite, " +
-                "Take all my comfort of thy worth and truth. " +
-                "For whether beauty, birth, or wealth, or wit, " +
-                "Or any of these all, or all, or more, " +
-                "Entitled in thy parts do crownèd sit, " +
-                "I make my love engrafted to this store. " +
-                "So then I am not lame, poor, nor despised, " +
-                "Whilst that this shadow doth such substance give " +
-                "That I in thy abundance am sufficed, " +
-                "And by a part of all thy glory live. " +
-                "Look what is best, that best I wish in thee. " +
-                "This wish I have; then ten times happy me.";
+        Utils.task(6);
+        String str6 = "As of March 2022, Java 18 is the latest version, while Java 17, 11 and 8 are the current " +
+                "long-term support (LTS) versions. Oracle released the last zero-cost public update for the legacy " +
+                "version Java 8 LTS in January 2019 for commercial use, although it will otherwise still support " +
+                "Java 8 with public updates for personal use indefinitely. Other vendors have begun to offer " +
+                "zero-cost builds of OpenJDK 8 and 11 that are still receiving security and other upgrades";
+        //String str6 = "As a decrepit father takes delight " +
+//                "To see his active child do deeds of youth, " +
+//                "So I, made lame by fortune’s dearest spite, " +
+//                "Take all my comfort of thy worth and truth. " +
+//                "For whether beauty, birth, or wealth, or wit, " +
+//                "Or any of these all, or all, or more, " +
+//                "Entitled in thy parts do crownèd sit, " +
+//                "I make my love engrafted to this store. " +
+//                "So then I am not lame, poor, nor despised, " +
+//                "Whilst that this shadow doth such substance give " +
+//                "That I in thy abundance am sufficed, " +
+//                "And by a part of all thy glory live. " +
+//                "Look what is best, that best I wish in thee. " +
+//                "This wish I have; then ten times happy me.";
         System.out.println(isThereJava(str6));
+
+//        String str7 = "One";
+        Utils.task(7);
+        String str7 = "    TWO  ";
+        System.out.println(addInvertedCommas(str7));
+
+        Utils.task(8);
+        String city1 = "ташкент";
+        String city2 = "ЧикаГО";
+        System.out.println(replaceNameCity(city1));
+        System.out.println(replaceNameCity(city2));
+
+        Utils.task(9);
+        String str9 = "Abracadabra";
+        String str9_1 = "Whippersnapper";
+        System.out.println(returnLettersBetweenStartAndEnd(str9));
+        System.out.println(returnLettersBetweenStartAndEnd(str9_1));
+
+        Utils.task(10);
+        String str10 = "Abracadabra";
+        String str10_1 = "Whippersnapper";
+        System.out.println(returnTrueOrFalse(str10_1));
+
+
 
 
     }
