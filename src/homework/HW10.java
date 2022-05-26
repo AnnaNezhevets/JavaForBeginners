@@ -2,6 +2,8 @@ package homework;
 
 import java.util.*;
 
+import static homework.MethMyforStudy.ANSI_RED;
+
 
 public class HW10 {
 
@@ -357,7 +359,18 @@ public class HW10 {
         System.out.println(removeLettersInTrueOrFalse("m", "l"));
         System.out.println(removeLettersInTrueOrFalse("a", "a"));
 
+//Task 11_11
+        String error = "Error: Precondition failed - Incomplete Input.";
+        //System.out.println(error.substring(0, 1).toUpperCase().concat(error.substring(1)));
+        for (int i = 1; i < error.length(); i++) {
+            if (error.charAt(i) == ' ') {
+                error = error.substring(0, i + 1).concat(error.substring(i + 1, i + 2).toUpperCase()).concat(error.substring(i + 2));
+            }
+        }
+        System.out.println(error.replace("F", "f"));
+
+
+
+        }
     }
 
-
-}
